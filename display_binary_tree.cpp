@@ -6,7 +6,7 @@ class Node{
     Node* left ;
     Node* right;
 
-    Node(int val){
+    Node(int val) {
         this->val = val;
         this->left = NULL;
         this->right = NULL;
@@ -31,8 +31,8 @@ int main(){
      a->right = c;
      b->left = d;
      b->right =e;
-     c->left = f;
-     c->right = g;
+    //  c->left = f;
+    //  c->right = g;
      display(a);
 
 }

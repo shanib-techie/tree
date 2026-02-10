@@ -32,10 +32,10 @@ int size(Node* root){
     return 1 +  size(root->left) + size(root->right);
 }
 
-int maxele (Node* root ){
-    if(root == NULL) return INT_MIN;
-    int lmax = maxele(root->left);
-    int rmax = maxele(root->right);
+int maxele (Node* root ){    //2    //5   //1  //null
+    if(root == NULL) return INT_MIN;  //execute  //again execute
+    int lmax = maxele(root->left);//b = 5   //b ka left = d => 1  //d ka left => null
+    int rmax = maxele(root->right); // d ka right => null   //b ka right
     return max(root->val,max(lmax,rmax));
 }
 
@@ -57,9 +57,9 @@ int main(){
     a->right =c;
     b->left = d;
     b->right= e;
-    c->left = f;
-    c->right = g;
-    g->right = h;
+    // c->left = f;
+    // c->right = g;
+    // g->right = h;
     display(a);
     cout<<"\n sum of tree : "<<sum(a);
     cout<<"\n size of tree : "<<size(a);
